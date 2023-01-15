@@ -5,11 +5,12 @@ namespace TaskForWork.Repositories
 {
     public interface IItemRepository
     {
-        List<Item> GetAllItems();
+        List<ItemList> GetAllItems();
         Item GetItemById(int id);
         int AddItem(Item item);
         int EditItem(Item item);
         Item EditItem(int id);
         int DeleteItems(int[] ids);
+        List<ItemComboDto> GetAllItemsForInvoice();
     }
 }

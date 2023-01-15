@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using NuGet.Protocol.Core.Types;
 using System.Security.Principal;
 using TaskForWork.Models;
+using TaskForWork.Models.DTOs;
 using TaskForWork.Repositories;
 
 namespace TaskForWork.Controllers
@@ -23,7 +24,7 @@ namespace TaskForWork.Controllers
 
         public IActionResult GetAllItems()
         {
-            List<Item> items = itemRepository.GetAllItems();
+            List<ItemList> items = itemRepository.GetAllItems();
             return Json(items);
         }
 
@@ -65,7 +66,7 @@ namespace TaskForWork.Controllers
 
 
         [HttpPost]
-        public  IActionResult DeleteItems(int[] data)
+        public IActionResult DeleteItems(int[] data)
         {
             int result = itemRepository.DeleteItems(data);
             if (result > 0)
@@ -75,6 +76,13 @@ namespace TaskForWork.Controllers
             else return Json('0');
         }
 
+
+        public IActionResult GetAllItemsForInvoice()
+        {
+            List<ItemComboDto> items = itemRepository.GetAllItemsForInvoice();
+            //string json = JsonConvert.SerializeObject(items);
+            return Json(items);
+        }
 
 
 

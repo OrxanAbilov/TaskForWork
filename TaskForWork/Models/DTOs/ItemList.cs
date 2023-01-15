@@ -1,10 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace TaskForWork.Models.DTOs
+﻿namespace TaskForWork.Models.DTOs
 {
-    public class ItemAddDto
+    public class ItemList
     {
-        [Required]
+        public int ItemId { get; set; }
         public string? ItemName { get; set; }
         public double ItemPrice { get; set; } = 0;
         public double ItemStock { get; set; } = 0;

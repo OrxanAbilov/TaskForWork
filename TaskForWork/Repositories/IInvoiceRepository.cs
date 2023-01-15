@@ -1,12 +1,14 @@
-﻿using TaskForWork.Models.DTOs;
+﻿using TaskForWork.Models;
+using TaskForWork.Models.DTOs;
 
 namespace TaskForWork.Repositories
 {
     public interface IInvoiceRepository
     {
-        int AddInvoice(InvoiceAddDto invoiceAddDto);
-        int EditInvoice(InvoiceAddDto invoiceAddDto);
-        int EditInvoice(int id);
-        int DeleteInvoice(int[] data);
+        List<InvoiceListDto> GetAllInvoices();
+        int AddInvoice(Invoice invoiceAdd);
+        int EditInvoice(InvoiceDto invoiceEdit);
+        InvoiceDto EditInvoice(int id);
+        int DeleteInvoices(int[] data);
     }
 }

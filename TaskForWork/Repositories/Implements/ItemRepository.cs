@@ -59,9 +59,27 @@ namespace TaskForWork.Repositories.Implements
             return item;
         }
 
-        public List<Item> GetAllItems()
+        public List<ItemList> GetAllItems()
         {
-            List<Item> items = dbCtx.Items.ToList();
+            List<ItemList> items = dbCtx.Items.Select(n => new ItemList()
+            {
+                ItemId = n.ItemId,
+                ItemName = n.ItemName,
+                ItemPrice = n.ItemPrice,
+                ItemStock = n.ItemStock - Convert.ToInt32(dbCtx.Invoices.Where(i => i.ItemId == n.ItemId).GroupBy(i => i.ItemId).Select(t => t.Sum(ta => ta.Amount)).FirstOrDefault())
+            }).ToList();
+            return items;
+        }
+
+        public List<ItemComboDto> GetAllItemsForInvoice()
+        {
+            List<ItemComboDto> items = dbCtx.Items.Select(n => new ItemComboDto()
+            {
+                ItemId = n.ItemId,
+                ItemName = n.ItemName,
+                ItemPrice=n.ItemPrice
+            }).ToList();
+
             return items;
         }
 

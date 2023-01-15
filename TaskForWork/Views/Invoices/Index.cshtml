@@ -1,0 +1,29 @@
+﻿
+
+@{
+    ViewData["Title"] = "Fakturalar";
+}
+
+
+
+<main class="main">
+    <div class="controls">
+        <div class="buttons">
+            <a href="#"><div class="button create" id="addInvoice"><i class="fa-solid fa-plus"></i>Yeni</div></a>
+            <a href="#"><div class="button update" id="editInvoice"><i class="fa-solid fa-pen"></i>Dəyişdir</div></a>
+            <a href="#"><div class="button delete" id="deleteInvoice"><i class="fa-solid fa-trash"></i>Sil</div></a>
+        </div>
+    </div>
+    <table class="table">
+       
+    </table>
+</main>
+
+
+<script src="~/js/invoicesJS.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        GetAllInvoices();
+    });
+       
+</script>

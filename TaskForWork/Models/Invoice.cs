@@ -11,7 +11,7 @@ namespace TaskForWork.Models
         public double Amount { get; set; }
         public double Price { get; set; } = 0;
         public double Total { get; set; }
-        public DateTime SaleDate { get; set; }=DateTime.Now;
+        public DateTime SaleDate { get; set; }= DateTime.Now;
 
     }
 }
