@@ -16,22 +16,6 @@
 
 }
 
-//function createCombo() {
-//    var url = 'Items/GetAllItemsForInvoice';
-//    $('#combo').html("");
-
-//    var thead = '<select id="items" name="items" multiple>';
-//    $('#combo').append(thead);
-//    $.getJSON(url, function (data) {
-//        for (var item in data) {
-//            var value = ' <option value="' + data[item].itemId + '">' + data[item].itemName + '</option>';
-//            $('#combo').append(value);
-//        }
-//    });
-
-//    $('#combo').append('</select>');
-
-//}
 
 
 function DataChanged() {
@@ -74,7 +58,7 @@ $(document).on("click", "#addInvoice", async function () {
         cancelButtonColor: "#3C3C3C",
         cancelButtonText: "İmtina Et",
         confirmButtonColor: "#165ba8",
-        confirmButtonText: "Təstiq"
+        confirmButtonText: "Təsdiq"
     })
 
     if (item) {
@@ -130,7 +114,7 @@ $(document).on("click", "#addInvoice", async function () {
                         Swal.fire({
                             icon: 'success',
                             title: 'Uğurlu',
-                            text: 'Məhsul uğurla əlavə edildi!',
+                            text: 'Faktura uğurla əlavə edildi!',
                             confirmButtonColor: '#165ba8',
                             confirmButtonText: 'Bağla'
                         });
@@ -140,7 +124,7 @@ $(document).on("click", "#addInvoice", async function () {
                         Swal.fire({
                             icon: 'error',
                             title: 'Uğursuz',
-                            text: 'Məhsul əlavə edərkən xəta baş verdi!',
+                            text: 'Faktura əlavə edərkən xəta baş verdi!',
                             confirmButtonColor: '#165ba8',
                             confirmButtonText: 'Bağla'
                         });
@@ -227,7 +211,7 @@ $(document).on("click", "#editInvoice", async function () {
                                     Swal.fire({
                                         icon: 'success',
                                         title: 'Uğurlu',
-                                        text: 'Məhsul uğurla əlavə edildi!',
+                                        text: 'Faktura uğurla dəyişdirildi!',
                                         confirmButtonColor: '#165ba8',
                                         confirmButtonText: 'Bağla'
                                     });
@@ -237,7 +221,7 @@ $(document).on("click", "#editInvoice", async function () {
                                     Swal.fire({
                                         icon: 'error',
                                         title: 'Uğursuz',
-                                        text: 'Məhsul əlavə edərkən xəta baş verdi!',
+                                        text: 'Faktura dəyişdirilərkən xəta baş verdi!',
                                         confirmButtonColor: '#165ba8',
                                         confirmButtonText: 'Bağla'
                                     });
