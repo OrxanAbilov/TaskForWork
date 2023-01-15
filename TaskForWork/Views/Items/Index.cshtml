@@ -1,0 +1,106 @@
+﻿@model List<Item>
+
+@{
+    ViewData["Title"] = "Məhsullar";
+    var rowNo = 0;
+}
+
+
+    <main class="main">
+        <div class="controls">
+            <div class="buttons">
+                <a href="#"><div class="button create" id="addItem"><i class="fa-solid fa-plus"></i>Yeni</div></a>
+            <a href="#"><div class="button update" id="editItem"><i class="fa-solid fa-pen"></i>Dəyişdir</div></a>
+                <a href="#"><div class="button delete" id="deleteItem"><i class="fa-solid fa-trash"></i>Sil</div></a>
+            </div>
+        </div>
+        <table class="table">
+           @* <div class="table-head">
+                <div class="head-line">
+                    <div class="head-column">No:</div>
+                    <div class="head-column">Ad</div>
+                    <div class="head-column">Qiymət</div>
+                    <div class="head-column">Miqdar</div>
+                </div>
+            </div>
+            <div class="table-body">
+                @foreach (var item in Model)
+            {
+                rowNo += 1;
+                <div class="body-line" id="@item.ItemId" onclick="GetItemId(this)">
+                    <div class="body-column">@rowNo</div>
+                    <div class="body-column">@item.ItemName</div>
+                    <div class="body-column">@item.ItemPrice$</div>
+                    <div class="body-column">@item.ItemStock</div>
+                </div>
+            }
+                
+            </div>*@
+        </table>
+    </main>
+
+
+@*
+<div class="modal">
+    <form class="form" asp-action="Index">
+        <div class="head">
+            <h4>Yeni</h4>
+            <a href=""><i class="fa-solid fa-times cancel"></i></a>
+        </div>
+        <div class="inputs">
+            
+            <label for="name">
+                Ad
+                <input type="text" class="name" id="itemName">
+            </label>
+            <label for="price">
+                Qiymət
+                <input type="number" class="price" id="itemPrice">
+            </label>
+            <label for="amount">
+                Miqdar
+                <input type="number" class="amount" id="itemStock">
+            </label>
+        </div>
+        <div class="form-buttons">
+            <button class="button cancel">imtina et</button>
+            <button class="button save" id="submitItem">yadda saxla</button>
+        </div>
+    </form>
+</div>*@
+
+
+
+<script src="~/js/itemsJS.js"></script>
+<script type="text/javascript">
+
+
+
+    $(document).ready(function(){
+        GetAllItems();
+    });
+    //$("#submitItem").click(function () {
+
+    //    if ($("#itemName").val() == "" || $("#itemPrice").val() == 0 || $("#itemStock").val()==0)
+    //    {
+    //        alert("Boş xanaları doldurun");
+    //    }
+    //    else 
+    //    {
+    //        $.ajax(
+    //        {
+    //            type: "POST", //HTTP POST Method
+    //            url: "Items/AddItem", // Controller/View
+    //            data: { //Passing data
+    //                ItemId: 0,
+    //                ItemName: $("#itemName").val(), //Reading text box values using Jquery
+    //                ItemPrice: $("#itemPrice").val(),
+    //                ItemStock: $("#itemStock").val()
+    //            }
+    //        });
+    //    }
+
+    //});
+
+
+</script>

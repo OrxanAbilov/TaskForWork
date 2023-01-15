@@ -1,0 +1,29 @@
+﻿@model Item
+
+<div class="modal">
+    <form class="form" asp-action="AddItem" asp-controller="Items" method="post">
+        <div class="head">
+            <h4>Yeni</h4>
+            <a href="#"><i class="fa-solid fa-times cancel"></i></a>
+        </div>
+        <div class="inputs">
+            <label for="name">
+                Ad
+                <input type="text" class="name" asp-for="ItemName">
+            </label>
+            <label for="price">
+                Qiymət
+                <input type="text" class="price" asp-for="ItemPrice">
+            </label>
+            <label for="amount">
+                Miqdar
+                <input type="text" class="amount" asp-for="ItemStock">
+            </label>
+        </div>
+        <div class="form-buttons">
+            <button class="button cancel">imtina et</button>
+            <button class="button save" type="submit">yadda saxla</button>
+        </div>
+    </form>
+</div>
+
