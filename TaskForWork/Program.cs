@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options=> options.UseSqlServer(connectionstring));
 builder.Services.AddScoped<IItemRepository,ItemRepository>();
 builder.Services.AddScoped<IInvoiceRepository,InvoiceRepository>();
+builder.Services.AddScoped<IReportRepository,ReportRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
