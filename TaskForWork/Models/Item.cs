@@ -9,5 +9,7 @@ namespace TaskForWork.Models
         public string? ItemName { get; set; }
         public double ItemPrice { get; set; } = 0;
         public double ItemStock { get; set; } = 0;
+
+        public ICollection<Invoice> Invoices { get; set; }
     }
 }

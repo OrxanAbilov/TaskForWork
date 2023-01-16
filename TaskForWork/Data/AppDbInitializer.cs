@@ -20,11 +20,14 @@ namespace TaskForWork.Data
                 {
                     List<Item> items = new List<Item>()
                 {
-                    new Item() {ItemName="Item1",ItemPrice=101,ItemStock=1001},
-                    new Item() {ItemName="Item2",ItemPrice=102,ItemStock=1002},
-                    new Item() {ItemName="Item3",ItemPrice=103,ItemStock=1003},
-                    new Item() {ItemName="Item4",ItemPrice=104,ItemStock=1004},
-                    new Item() {ItemName="Item5",ItemPrice=105,ItemStock=1005}
+                    new Item() {ItemName="Samsung Galaxy A32",ItemPrice=600,ItemStock=20},
+                    new Item() {ItemName="IPhone",ItemPrice=3050,ItemStock=25},
+                    new Item() {ItemName="HP Pavilion 15",ItemPrice=1500,ItemStock=30},
+                    new Item() {ItemName="Logitech Mouse M171",ItemPrice=18,ItemStock=35},
+                    new Item() {ItemName="Nokia 6300",ItemPrice=800,ItemStock=40},
+                    new Item() {ItemName="Honor X9",ItemPrice=600,ItemStock=45},
+                    new Item() {ItemName="Redmi Note 4X",ItemPrice=400,ItemStock=50},
+                    new Item() {ItemName="AirDots",ItemPrice=50,ItemStock=55}
                 };
 
                     context.Items.AddRange(items);
